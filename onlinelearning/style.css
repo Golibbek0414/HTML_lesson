@@ -1,12 +1,8 @@
-
-.subtitle{
-    color: rgb(166, 227, 33);
-}
 .ribbon{
     background-color: #5BC8F7;
 }
 .ribbon::after {
-    content:"Bu ajoyib apelsin qutisi.";
+    content:"This is a fancy orange box.";
     background-color:red;
     border-style:dotted;
     border-color:black

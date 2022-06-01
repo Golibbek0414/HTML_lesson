@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="G'olibbek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first html project</title>
+</head>
+<body>
+    <h1><span style="color:rgb(0, 123, 255)">GRPC</span></h1>
+    <br>gRPC — Google tomonidan ishlab chiqilgan, HTTP/2 ustida ishlaydigan.
+    <br>Yuqori unumdorlikdagi masofaviy protsedura chaqiruvi (RPC) ramkasi.
+    <br>gRPC dan foydalanish oson, taqsimlangan tizimlar (mikroservislar) va API yaratish uchun juda mos keladi.
+    <br>U yukni muvozanatlash, kuzatish, autentifikatsiya qilish va xizmat ko'rsatishni tekshirish uchun o'rnatilgan yordamga ega.
+    <br> Backend bilan ishlash uchun 10 ta tilda mijozlar kutubxonalarini yaratish mumkin.
+    <br>Yuqori samaradorlikka HTTP/2 protokoli va Protokol Buferlaridan foydalanish orqali erishiladi.
+    <h2><span style="color:rgb(0,123,255)">Protokol buferlari(protobuf)</span></h2>
+    <br>Protobuf mijoz va server o'rtasida ma'lumotlarni uzatish uchun standart seriyali formatdir.
+    <br>Strukturaviy ma'lumotlarni uzatish uchun kuchli maydon yozish va ikkilik formatdan foydalanish kamroq resurslarni sarflaydi.
+    <br>JSON/XML dan farqli o'laroq, seriyalilashtirish/seriyadan chiqarish jarayonining bajarilish vaqti xabarlar hajmidan ham kamroq.
+    <br>Interfeys tavsif tili (IDL) protobuf fayllarini yozish uchun ishlatiladi.
+    <br>Masalan, xabarning ma'lumotlar strukturasini tavsiflash uchun siz xabarni, strukturaning nomini va ichiga turi, nomi va maydon raqamini qo'shishingiz kerak.
+    <br>Maydon raqamlari orqaga qarab muvofiqlik uchun juda muhim, shuning uchun maydonlarni qo'shish yoki olib tashlashda ularning ketma-ketligini o'zgartirmang.
+    <br>Eski raqamlarni band qilish mumkin. profile.proto misoli
+
+    
+    <div style ="background-color: yellowgreen;">
+        <aside>
+            <h2>Masala</h2>
+
+            <nav>
+                <ul>
+                    <li> message Profile {</li>
+                    <li> reserved 3; // Резервируем поле под номером 3</li>
+                    <li> int32 id = 1;</li>
+                    <li> string name = 2;</li>
+                    <li> int32 age = 4;</li>
+                    <li> string email = 5;</li>
+                    <li> enum PhoneType {</li>
+                    <li> MOBILE = 0;  // Поле 0 является значением по умолчанию</li>
+                    <li> HOME = 1;</li>
+                    <li> WORK = 2;</li>
+                    <li> }</li>
+                    <li> message PhoneNumber {</li>
+                    <li> string number = 1;</li>
+                    <li> PhoneType type = 2;</li>
+                    <li> }</li>
+                    <li> repeated PhoneNumber phones = 6;</li>
+                    <li> }</li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <div style="background-color:red;">
+        <h2>RPC turlari</h2>
+        <nav>
+            <ul>
+                <li>Birlik ( Unary RPC). Serverdan javob olinmaguncha bloklaydigan sinxrom mijoz so'rovi.</li>
+                <li>Server oqimi RPC, mimoz ulanganda,server oqimni ochadi va xabarlarni yuborishni boshlaydi.</li>
+                <li>Mijoz oqimi (mijoz oqimi RPC). Server bilan bir xil, faqat mijoz serverga xabarlar yuborishni boshlaydi.</li>
+                <li>Ikki tomonlama oqim. Mijoz ulanishni ishga tushiradi, ikkita oqim yaratiladi. Server ulanganda dastlabki ma'lumotlarni yuborishi yoki har bir mijoz so'roviga stol tennisi uslubida javob berishi mumkin.</li>
+            </ul>
+        </nav>
+    </div>
+    <h2>Interceptors</h2>
+    <br>Ular o'rta dasturni almashtirish vazifasini bajaradi, ular qo'ng'iroqlarni ushlab turish va kerakli shartlarni joylashtirish uchun xizmat qiladi.
+    <br>So'rovlarni ro'yxatga olish, o'lchovlarni yig'ish, auterntifikatsiya qilish va hokazolar uchun juda yaxshi.
+    <br>Go-grpc-middleware toplamidan foydalangan holda barcha turdagi so'rovlar uchun ro'yxatga olish, monitoring va autentifikatsiyani ulash misoli:
+    <div style ="background-color: yellowgreen;">
+        <aside>
+            <h2>Masala</h2>
+
+            <nav>
+                <ul>
+                    <li>import "github.com/mwitkow/go-grpc-middleware"</li>
+                    <li>myServer :=grpc.NewServer(</li>
+                    <li>grpc.StreamInterceptor(grpc_middleware.ChainStreamServer(loggingStream,</li>
+                    <li>monitoringSream, authStream)),</li>
+                    <li>grpcceptarynUrpc.),)</li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    <h2>Yuklarni muvozanatlash</h2>
+    <br>Mijoz tomonida bajarilgan. 
+    <br>Mijoz LB serveridan olingan ro'yxatga qarshi so'rovlarni jo'natish uchun oddiy "round-robin" algoritmidan foydalanadi. 
+    <br>Agar so'ralsa, LB server tomonida siz LB siyosatlaridan foydalangan holda mijozga backend xizmatlari ro'yxatini berish uchun murakkabroq algoritmni tashkil qilishingiz mumkin.  
+    
+</body>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="G'olibbek">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first html project</title>
+</head>
+<body>
+    <div style="background-color: white(229, 216, 223);"> 
+        <h1><span style="color:aqua;">Massivlar</span></h1>
+        <h2>Massiv tushunchasi. Massivni e'lon qilish va ishga tushirish</h2>
+            <br>Massiv-bir xil turdagi elementlarning qat'iy uzunlikdagi ketma-ketligi.
+            <br>Massiv quyidagicha e'lon qilinadi:
+            <br><span style="color:blueviolet;">var a [3]int</span>
+            <br>fmt.Println(a) <span style="color:red;">// [0 0 0]</span>
+        <h2><span style="color:aqua;">Massiv deklaratsiyasi bilan bir vaqtda biz uning elementlarining qiymatlarini o'rnatishimiz mumkin</span></h2>
+            <br><span style="color:blue;">var a [3]int = [3]int{1, 2, 3}</span>
+            <br><span style="color:aqua;">b := [3]int{1, 2, 3}</span>
+            <br><span style="color:red;">c :=[...]int{1, 2, 3}</span>
+            <br><span style="color:black;">d :=[3]int{1: 12}</span>
+            <br>
+            <br>fmt.Println(a) <span style="color:red;">//[1 2 3]</span>
+            <br>fmt.Println(b) <span style="color:red;">//[1 2 3]</span>
+            <br>fmt.Println(c) <span style="color:red;">//[1 2 3]</span>
+            <br>fmt.Println(d) <span style="color:red;">//[0 12 0]</span>
+        <h2><span style="color:aqua;">Massivlarni taqqoslash</span></h2>
+        <p>Massivning barcha elementarini ketma-ket taqqoslashimiz mumkin bo'lganligi sababli,biz massivlarning o'zini solishtirishimiz mumkin:</p>
+            <br><span style="color:blueviolet;">a := [3]int{1, 2, 3}</span>
+            <br><span style="color:blue;">b := [3]int{1, 2, 3}</span>
+            <br><span style="color:green;">c := [3]int{3, 2, 1}</span>
+            <br>
+            <br>fmt.Println(a==b) <span style="color:red;">// true</span>
+            <br>fmt.Println(a==c) <span style="color:red;">// false</span>
+        <br>!!!! Ammo shuni hisobga olish kerakki, faqat bir xil turdagi massivlar solishtirish mumkin (bir xil uzunlikdagi bir xil turdagi elementlarni o'z ichiga olgan massivlar).
+    </div>
+</body>

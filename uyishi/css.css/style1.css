@@ -1,0 +1,44 @@
+
+
+#dar {
+    background-image: linear-gradient(red, yellow);
+  } 
+
+
+
+
+  /* #dar {
+    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+  } */
+
+
+
+  #grad {
+    background-image: conic-gradient(red, yellow, green, blue, black);
+  }
+
+
+
+  /* #grad {
+    background-image: linear-gradient(red, yellow, green);
+  } */
+
+
+
+  /* #div {
+    background-image: radial-gradient(circle, red, yellow, green); // sinov
+  } */
+
+
+
+  /* #grad {
+    background-image: repeating-conic-gradient(red 10%, yellow 20%,aqua 30%);
+    border-radius: 50%;
+  } */
+
+
+
+  /* #grad {
+    background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+    border-radius: 70%; 
+  } */

@@ -1,4 +1,4 @@
-
+/* 
 .subtitle{
     color: rgb(166, 227, 33);
 }
@@ -10,4 +10,34 @@
     background-color:red;
     border-style:dotted;
     border-color:black
-}
+} */
+
+
+/* #div {
+    box-shadow: 10px 10px 5px 12px rgb(65, 1, 1);
+  } */
+
+
+  /* div {
+    box-shadow: 10px 10px 5px 12px rgb(172, 3, 3);
+  } */
+
+
+  /* div.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  } */
+
+
+  /* #div {
+    box-shadow: 10px 10px 5px 12px rgb(205, 14, 148);
+  } */
+
+
+
+/* 
+  div {
+    transform: rotate(20deg); // yon taraflama
+  } */
+

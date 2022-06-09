@@ -1,27 +1,27 @@
 
 
-#dar {
+/* #dar {
     background-image: linear-gradient(red, yellow);
-  } 
+  }  */
 
 
 
 
-  /* #dar {
+  #dar {
     background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
-  } */
-
-
-
-  #grad {
-    background-image: conic-gradient(red, yellow, green, blue, black);
   }
 
 
 
   /* #grad {
-    background-image: linear-gradient(red, yellow, green);
+    background-image: conic-gradient(red, yellow, green, blue, black);
   } */
+
+
+
+  #grad {
+    background-image: linear-gradient(red, yellow, green);
+  }
 
 
 

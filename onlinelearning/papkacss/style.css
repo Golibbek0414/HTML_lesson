@@ -16,11 +16,12 @@
 
 
 
-  /* #grad {
+  /* #grand {
     background-image: linear-gradient(red, yellow, green);
   } */
 
-
-  #grad {
+ 
+ 
+  #grand {
     background-image: radial-gradient(circle, red, yellow, green);
   }
